@@ -1,0 +1,13 @@
+# Sample docker-compose for testing and, with mods, production
+version: '2.3'
+services:
+  ncwms-production:
+    image: ncwms29:latest
+    build: .
+    ports:
+      - "${PORT}:8080"
+    container_name: ncwms
+    volumes:
+      - ${TOMCAT_USERS}/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ${NCWMS}/config.xml:/usr/local/tomcat/.ncWMS2/config.xml
+      - ${NCWMS}/.palettes.xml:/usr/local/tomcat/.ncWMS2/.palettes.xml

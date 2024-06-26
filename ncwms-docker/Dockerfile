@@ -1,0 +1,31 @@
+#FROM tomcat:9-jdk11
+FROM tomcat:8.5-jre8
+MAINTAINER Kyle Wilcox <kyle@axiomdatascience.com>
+
+# Add Tomcat User/Group
+ARG RUN_USER=tomcat
+ARG RUN_GROUP=tomcat
+RUN groupadd -r ${RUN_GROUP} && \
+    useradd -g ${RUN_GROUP} -d ${CATALINA_HOME} -s /bin/bash ${RUN_USER} && \
+    chown -R tomcat:tomcat $CATALINA_HOME && \
+    mkdir -p /usr/local/tomcat/.ncWMS2 && \
+    chown tomcat:tomcat /usr/local/tomcat/.ncWMS2
+USER ${RUN_USER}
+
+# Download and unpack the full EPSG geodetic dataset
+#ADD --chown=tomcat:tomcat \
+#    https://repo1.maven.org/maven2/org/apache/sis/non-free/sis-embedded-data/1.0/sis-embedded-data-1.0.jar \
+#    ./sis-embedded-data-1.0.jar
+#RUN unzip sis-embedded-data-1.0.jar && \
+#    rm sis-embedded-data-1.0.jar
+# Unpacking the jar creates a *directory* called SIS_DATA containing the dataset.
+# The *env variable* SIS_DATA tells ncWMS where to find it.
+#ENV SIS_DATA=/usr/local/tomcat/SIS_DATA
+
+# Download the ncWMS 2.5.1 snapshot (pre-release version).
+# Note ncWMS numbered their release incorrectly: they said 1.5.1 but meant 2.5.1.
+ADD --chown=tomcat:tomcat \
+    https://github.com/Reading-eScience-Centre/ncwms/releases/download/ncwms-2.2.9/ncWMS2.war \
+    $CATALINA_HOME/webapps/ncWMS.war
+
+EXPOSE 8080

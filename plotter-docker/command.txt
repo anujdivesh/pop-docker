@@ -1,0 +1,30 @@
+FROM continuumio/miniconda3
+
+WORKDIR /app
+
+COPY environments.yml /app/environments.yml
+
+RUN conda update -n base -c defaults conda
+RUN conda create -n anuj 
+RUN conda env update --name anuj --file /app/environments.yml
+#RUN conda env update --name base --file /app/environments.yml
+#RUN conda env create -n test -f /app/environments.yml
+
+SHELL ["conda", "run", "--no-capture-output", "-n", "anuj", "/bin/bash", "-c"]
+
+## Demonstrate the environment is activated:
+#RUN echo "Make sure flask is installed:"
+#RUN python -c "import flask"
+#
+## The code to run when container is started:
+#COPY run.py .
+#ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "myenv", "python", "run.py"]
+#
+#
+#RUN echo "source activate myenv" > ~/.bashrc
+#
+#ENV PATH /opt/conda/envs/myenv/bin:$PATH
+#
+#EXPOSE 8888
+
+docker run -v /home/pop/Desktop/ocean-portal2.0/docker/final/miniconda-docker:/env -ti --rm con -c 'python -V'

@@ -1,0 +1,2 @@
+2024-06-17 04:12:10 INFO  ConfigServlet:85 - No godiva3.properties file found.  Defaults will be used.
+2024-06-17 04:15:28 INFO  WmsContextListener:90 - Deregistering JDBC driver org.h2.Driver@195088b9

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  cgitest:
+    restart: unless-stopped
+    container_name: cgitest
+    build: .
+    ports:
+      - "8182:80"
+    volumes:
+      - /home/pop/Desktop/ocean-portal2.0/docker/docker-cgi-python/cgi-bin:/usr/lib/cgi-bin
+      - /home/pop/Desktop/ocean-portal2.0/docker/docker-cgi-python/pyenv:/usr/lib/pyenv
+

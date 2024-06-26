@@ -1,0 +1,10 @@
+version: "3"
+services:
+  cgi-python:
+    restart: unless-stopped
+    container_name: cgi-python
+    build: ./docker_file
+    ports:
+      - "${PORT}:80"
+    volumes:
+      - ${CGI_PATH}/cgi-bin:/usr/lib/cgi-bin

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ncwms2:
+    image: ncwms2:latest
+    ports:
+      - "8090:8080"
+    container_name: ncwms2
+    volumes:
+      - /home/pop/Desktop/ocean-portal2.0/docker/docker-ncwms/deploy/tomcat/logs/:/usr/local/tomcat/logs/
+      - /home/pop/Desktop/ocean-portal2.0/docker/docker-ncwms/deploy/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - /home/pop/Desktop/ocean-portal2.0/docker/docker-ncwms/deploy/.ncWMS2:/usr/local/tomcat/.ncWMS2
+    env_file:
+      - "compose${THREDDS_COMPOSE_ENV_LOCAL}.env"

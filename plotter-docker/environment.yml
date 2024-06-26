@@ -1,0 +1,7 @@
+name: tcrm_v2
+channels:
+  - defaults
+dependencies:
+  - python==3.11.8
+  - pandas
+prefix: C:\Users\gregoires\Anaconda3\envs\tcrm_v2
