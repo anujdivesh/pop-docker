@@ -4,9 +4,8 @@ echo "Pacific Ocean Portal - Installer"
 echo "--------------------------------"
 
 #SETUP BASE DIRECTORIES - CHANGE
-baseURL="/home"
-username="pop"
-rootPath="${baseURL}/${username}/ocean_portal"
+baseURL="/home/pop"
+rootPath="${baseURL}/ocean_portal"
 
 #DATASETS - DO NOT CHANGE
 dataRoot="${rootPath}/datasets"
@@ -137,59 +136,67 @@ threddsConfig="${config}/thredds_config"
 ncwmsConfig="${config}/ncwms_config"
 erddapConfig="${config}/erddap_config"
 cgiConfig="${config}/cgi_config"
-nodeConfig="${config}/node_config"
+oceanAPI="${config}/ocean_api"
 dataDownloadConfig="${config}/data_download_config"
 plotterConfig="${config}/plotter_config"
 
 mkdir -p ${config} ${threddsConfig} ${ncwmsConfig} \
-    ${erddapConfig} ${cgiConfig} ${nodeConfig} \
+    ${erddapConfig} ${cgiConfig} ${oceanAPI} \
     ${dataDownloadConfig} ${plotterConfig} 
 
 work_dir=$(pwd)
-echo "Installing THREDDS-Docker"
+
+echo "Installing THREDDS-Docker...."
 cd ${work_dir}
 #COPY THREDDS DOCKER
 cp -rf ./thredds-docker ${threddsConfig}
 cd "${threddsConfig}/thredds-docker"
-PORT="8093" THREDDS="${threddsConfig}/thredds-docker" TOMCAT_USERS="${threddsConfig}/thredds-docker/files"\
-    DATA="${dataRoot}" docker-compose up -d thredds-production
+#PORT="8081" THREDDS="${threddsConfig}/thredds-docker" TOMCAT_USERS="${threddsConfig}/thredds-docker/files"\
+#    DATA="${dataRoot}" docker-compose up -d thredds-production
 
-echo "THREDDS installation completed!"
+echo "THREDDS installation completed!!!!"
 
-echo "Installing ncWMS2-docker"
+echo "Installing ncWMS2-docker...."
 cd ${work_dir}
 cp -rf ./ncwms-docker ${ncwmsConfig}
 cd "${ncwmsConfig}/ncwms-docker"
-#PORT="8084" TOMCAT_USERS="${ncwmsConfig}/ncwms-docker/tomcat" NCWMS="${ncwmsConfig}/ncwms-docker/.ncWMS2" \
+#PORT="8082" TOMCAT_USERS="${ncwmsConfig}/ncwms-docker/tomcat" NCWMS="${ncwmsConfig}/ncwms-docker/.ncWMS2" \
 #    docker-compose up -d ncwms-production
-echo "ncWMS installation completed!"
+echo "ncWMS installation completed!!!!"
 
-echo "Installing ERDDAP-docker"
+echo "Installing ERDDAP-docker...."
 cd ${work_dir}
 cp -rf ./erddap-docker ${erddapConfig}
 cd "${erddapConfig}/erddap-docker"
-#PORT="8087" IP="192.168.55.196" docker-compose up -d erddap
-echo "ERDDAP installation completed!"
+#PORT="8083" IP="192.168.55.196" docker-compose up -d erddap
+echo "ERDDAP installation completed!!!!"
 
-echo "Installing CGI-docker"
-cd ${work_dir}
-cp -rf ./cgi-docker ${cgiConfig}
-cd "${cgiConfig}/cgi-docker"
+#echo "Installing CGI-docker"
+#cd ${work_dir}
+#cp -rf ./cgi-docker ${cgiConfig}
+#cd "${cgiConfig}/cgi-docker"
 #PORT="8088" CGI_PATH="${cgiConfig}/cgi-docker" docker-compose up -d cgi-python
-echo "CGI installation completed!"
+#echo "CGI installation completed!"
 
-echo "Installing data-download-docker image"
-cd ${work_dir}
-cp -rf ./data-download-docker ${dataDownloadConfig}
-cd "${dataDownloadConfig}/data-download-docker"
+#echo "Installing data-download-docker image"
+#cd ${work_dir}
+#cp -rf ./data-download-docker ${dataDownloadConfig}
+#cd "${dataDownloadConfig}/data-download-docker"
 #docker build -t data-download .
-echo "data-download-docker installation completed!"
+#echo "data-download-docker installation completed!"
 
-echo "Installing plotter-docker image"
-cd ${work_dir}
-cp -rf ./plotter-docker ${plotterConfig}
-cd "${plotterConfig}/plotter-docker"
+#echo "Installing plotter-docker image"
+#cd ${work_dir}
+#cp -rf ./plotter-docker ${plotterConfig}
+#cd "${plotterConfig}/plotter-docker"
 #docker build -t plotter .
-echo "plotter-docker installation completed!"
+#echo "plotter-docker installation completed!"
 
-echo "Pacific Ocean Portal ENV setup completed."
+#echo "Pacific Ocean Portal ENV setup completed."
+
+echo "Installing Ocean-API....."
+cd ${work_dir}
+cp -rf ./ocean-api-docker ${oceanAPI}
+cd "${oceanAPI}/ocean-api-docker"
+PORT="8084" docker-compose up -d
+echo "Ocean API installation completed!!!"
