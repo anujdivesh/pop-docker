@@ -1,6 +1,6 @@
 
-const { authJwt } = require("../middleware/index.js");
-const controller = require("../controllers/country.controller.js");
+const { authJwt } = require("../middleware");
+const controller = require("../controllers/country.controller");
 
 module.exports = app => {
   app.use(function(req, res, next) {
@@ -18,22 +18,22 @@ module.exports = app => {
     // Retrieve all Tutorials
     router.get("/", country.findAll);
   
-    app.use('/api/countries', router);
+    app.use('/v1/api/countries', router);
 
     app.post(
-      "/api/country/add",
+      "/v1/api/country/add",
       controller.findOrCreate,
     );
     app.get(
-      "/api/country/:short_name",
+      "/v1/api/country/:short_name",
       controller.findOne
     );
     app.put(
-      "/api/country/:short_name",
+      "/v1/api/country/:short_name",
       controller.update
     );
     app.delete(
-      "/api/country/:short_name",
+      "/v1/api/country/:short_name",
       controller.destroy
     );
   };

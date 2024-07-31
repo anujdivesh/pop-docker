@@ -17,23 +17,23 @@ module.exports = app => {
   // Retrieve all Tutorials
   router.get("/", log.findAll);
 
-  app.use('/api/logs', router);
+  app.use('/v1/api/logs', router);
 
 
   app.post(
-    "/api/log/add",
+    "/v1/api/log/add",
     controller.findOrCreate
   );
   app.get(
-    "/api/log/:id",
+    "/v1/api/log/:id",
     controller.findOne
   );
   app.put(
-    "/api/log/:id",
+    "/v1/api/log/:id",
     controller.update
   );
   app.delete(
-    "/api/log/:id",
+    "/v1/api/log/:id",
     controller.destroy
   );
 };

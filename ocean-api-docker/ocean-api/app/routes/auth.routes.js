@@ -22,11 +22,11 @@ module.exports = function(app) {
 
   app.post("/api/auth/signin", controller.signin);
 
-  app.post("/api/auth/refreshtoken", controller.refreshToken);
-  app.post("/api/auth/forgotpassword", controller.forgotPassword);
-  app.get("/api/auth/resetPassword/:id/:token", controller.resetPassword);
-  app.post("/api/auth/resetPassword/:id/:token", controller.resetPasswordpost);
-  app.post("/api/auth/addRoleeyJhbGciOiJIUzI1NiIsInR5cC", controller.findOrCreateRole);
-  app.get("/api/auth/findeyJhbGciOiJIUzI1NiIsInR5cC", controller.findAllRole);
-  app.post("/api/auth/logout", controller.destroyRefresh);
+  app.post("/v1/api/auth/refreshtoken", controller.refreshToken);
+  app.post("/v1/api/auth/forgotpassword", controller.forgotPassword);
+  app.get("/v1/api/auth/resetPassword/:id/:token", controller.resetPassword);
+  app.post("/v1/api/auth/resetPassword/:id/:token", controller.resetPasswordpost);
+  app.post("/v1/api/auth/addRoleeyJhbGciOiJIUzI1NiIsInR5cC", controller.findOrCreateRole);
+  app.get("/v1/api/auth/findeyJhbGciOiJIUzI1NiIsInR5cC", controller.findAllRole);
+  app.post("/v1/api/auth/logout", controller.destroyRefresh);
 };

@@ -1,0 +1,18 @@
+2024-07-29T20:59:52.108 +0000 [      7604][        ] WARN  - org.apache.velocity.deprecation - configuration key 'class.resource.loader.class' has been deprecated in favor of 'resource.loader.class.class'
+2024-07-29T20:59:52.113 +0000 [      7609][        ] WARN  - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2024-07-29T20:59:52.274 +0000 [      7770][        ] WARN  - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2024-07-29T20:59:52.275 +0000 [      7771][        ] WARN  - org.apache.velocity.deprecation - configuration key 'class.resource.loader.class' has been deprecated in favor of 'resource.loader.class.class'
+2024-07-29T20:59:55.951 +0000 [     11447][        ] INFO  - net.openhft.chronicle.core.Jvm - Chronicle core loaded from file:/usr/local/tomcat/webapps/thredds/WEB-INF/lib/chronicle-core-2.25ea15.jar
+2024-07-29T20:59:56.613 +0000 [     12109][        ] WARN  - net.openhft.chronicle.map.ChronicleMapBuilder - Recovery operation needs exclusive access to the ChronicleMap or else the result is unspecified including the risk of losing and/or corrupting partial or all data.
+2024-07-29T20:59:56.613 +0000 [     12109][        ] WARN  - net.openhft.chronicle.map.ChronicleMapBuilder - Do not use recovery as a standard way of opening a ChronicleMap.
+2024-07-29T20:59:58.949 +0000 [     14445][        ] INFO  - net.openhft.chronicle.core.internal.announcer.InternalAnnouncer - Running under OpenJDK Runtime Environment 11.0.24+8 with 4 processors reported.
+2024-07-29T20:59:58.949 +0000 [     14445][        ] INFO  - net.openhft.chronicle.core.internal.announcer.InternalAnnouncer - Leave your e-mail to get information about the latest releases and patches at https://chronicle.software/release-notes/
+2024-07-29T20:59:58.949 +0000 [     14445][        ] INFO  - net.openhft.chronicle.core.internal.announcer.InternalAnnouncer - Process id: 1 :: Chronicle Map (3.25ea6)
+2024-07-29T20:59:59.295 +0000 [     14791][        ] WARN  - org.apache.velocity.deprecation - configuration key 'class.resource.loader.class' has been deprecated in favor of 'resource.loader.class.class'
+2024-07-29T20:59:59.295 +0000 [     14791][        ] WARN  - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2024-07-29T20:59:59.422 +0000 [     14918][       1] INFO  - threddsServlet - Remote host: 127.0.0.1 - Request: "GET /thredds/catalog.html HTTP/1.1"
+2024-07-29T20:59:59.422 +0000 [     14918][       2] INFO  - threddsServlet - Remote host: 172.18.0.1 - Request: "GET /thredds/ HTTP/1.1"
+2024-07-29T20:59:59.461 +0000 [     14957][       1] INFO  - threddsServlet - Request Completed - 302 - -1 - 36
+2024-07-29T20:59:59.461 +0000 [     14957][       2] INFO  - threddsServlet - Request Completed - 302 - -1 - 36
+2024-07-29T20:59:59.470 +0000 [     14966][       3] INFO  - threddsServlet - Remote host: 172.18.0.1 - Request: "GET /thredds/catalog/catalog.html HTTP/1.1"
+2024-07-29T20:59:59.927 +0000 [     15423][       3] INFO  - threddsServlet - Request Completed - 200 - -1 - 457

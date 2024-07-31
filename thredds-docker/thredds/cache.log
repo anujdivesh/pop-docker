@@ -1,0 +1,22 @@
+[2024-07-25T03:11:19.390+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/agg every 1440 minutes for files older than 129600 minutes
+[2024-07-25T03:11:19.391+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/aggNew/ every 1440 minutes for files older than 129600 minutes
+[2024-07-25T03:11:19.459+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/ncss every 10 minutes for files older than 5 minutes
+[2024-07-25T03:11:21.383+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/wcs every 15 minutes for files older than 30 minutes
+[2024-07-25T03:14:03.330+0000] FileCache.shutdown called%n
+[2024-07-25T03:14:03.331+0000] DiskCache2.exit()%n
+[2024-07-25T03:19:37.921+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/agg every 1440 minutes for files older than 129600 minutes
+[2024-07-25T03:19:37.922+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/aggNew/ every 1440 minutes for files older than 129600 minutes
+[2024-07-25T03:19:37.980+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/ncss every 10 minutes for files older than 5 minutes
+[2024-07-25T03:19:40.263+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/wcs every 15 minutes for files older than 30 minutes
+[2024-07-28T21:54:56.277+0000] FileCache.shutdown called%n
+[2024-07-28T21:54:56.277+0000] DiskCache2.exit()%n
+[2024-07-28T21:54:56.277+0000] FileCache RandomAccessFile force close locked file= true 0 2024-07-25T03:32:52.995Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/swan_HS.63.nc
+[2024-07-28T21:54:56.278+0000] FileCache RandomAccessFile force close locked file= true 0 2024-07-25T03:24:22.132Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/latest.nc
+[2024-07-28T21:54:56.278+0000] FileCache RandomAccessFile force close locked file= true 0 2024-07-25T03:32:21.537Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/maxele.63.nc
+[2024-07-28T21:54:56.278+0000] FileCache NetcdfFileCache force close locked file= true 0 2024-07-25T03:32:52.996Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/swan_HS.63.nc
+[2024-07-28T21:54:56.278+0000] FileCache NetcdfFileCache force close locked file= true 0 2024-07-25T03:32:21.557Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/maxele.63.nc
+[2024-07-28T21:54:56.278+0000] FileCache NetcdfFileCache force close locked file= true 0 2024-07-25T03:24:22.137Z   /usr/local/data/model/regional/copernicus/forecast/daily/phytoplankton/latest.nc
+[2024-07-29T20:59:55.678+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/agg every 1440 minutes for files older than 129600 minutes
+[2024-07-29T20:59:55.679+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/aggNew/ every 1440 minutes for files older than 129600 minutes
+[2024-07-29T20:59:55.726+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/ncss every 10 minutes for files older than 5 minutes
+[2024-07-29T20:59:59.076+0000] Started a DiskCache2 scour task on /usr/local/tomcat/content/thredds/cache/wcs every 15 minutes for files older than 30 minutes

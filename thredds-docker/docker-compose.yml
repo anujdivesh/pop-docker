@@ -1,7 +1,7 @@
 version: '3'
 services:
   thredds-production:
-    image: unidata/thredds-docker:5.4
+    image: unidata/thredds-docker:5.5
     ports:
       - "${PORT}:8080"
     container_name: thredds

@@ -17,23 +17,23 @@ module.exports = app => {
   // Retrieve all Tutorials
   router.get("/", log.findAll);
 
-  app.use('/api/tasks', router);
+  app.use('/v1/api/tasks', router);
 
 
   app.post(
-    "/api/task/add",
+    "/v1/api/task/add",
     controller.findOrCreate
   );
   app.get(
-    "/api/task/:id",
+    "/v1/api/task/:id",
     controller.findOne
   );
   app.put(
-    "/api/task/:id",
+    "/v1/api/task/:id",
     controller.update
   );
   app.delete(
-    "/api/task/:id",
+    "/v1/api/task/:id",
     controller.destroy
   );
 };

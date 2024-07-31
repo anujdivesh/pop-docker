@@ -41,8 +41,8 @@ const db = require("./app/models");
 db.sequelize.sync();
 
 // simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Pacific Ocean Portal secured with JWT, OpenAPI 1.0 xxx" });
+app.get("/v1", (req, res) => {
+  res.json({ message: "Pacific Ocean Portal secured with JWT, OpenAPI 1.0 " });
 });
 
 // routes
@@ -136,7 +136,10 @@ function initial() {
     health:'Excellent',
     fail_count:0,
     success_count:0,
-    reset_count: 0
+    reset_count: 0,
+    created_by:'root',
+    launched_by:'root',
+    retain: false,
   });
   
   Log.create({

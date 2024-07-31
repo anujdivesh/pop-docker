@@ -28,3 +28,6 @@ SHELL ["conda", "run", "--no-capture-output", "-n", "anuj", "/bin/bash", "-c"]
 #EXPOSE 8888
 
 docker run -v /home/pop/Desktop/ocean-portal2.0/docker/final/miniconda-docker:/env -ti --rm con -c 'python -V'
+
+
+docker run -v /home/pop/Desktop/ocean-portal2.0/backend_design:/env -ti --rm con -c 'python /env/main.py'

@@ -1,0 +1,6 @@
+[2024-07-25T03:11:19.475+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Creating cache directory at /usr/local/tomcat/content/thredds/cache/collection
+[2024-07-25T03:11:19.476+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Creating new grid inventory cache file at /usr/local/tomcat/content/thredds/cache/collection/GridDatasetInv.dat
+[2024-07-25T03:19:37.995+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Previous grid inventory cache found. Using /usr/local/tomcat/content/thredds/cache/collection/GridDatasetInv.dat
+[2024-07-25T03:19:37.995+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Grid inventory cache built with: maxEntries=1000, maxBloatFactor=1, averageValueSize=4096
+[2024-07-29T20:59:55.736+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Previous grid inventory cache found. Using /usr/local/tomcat/content/thredds/cache/collection/GridDatasetInv.dat
+[2024-07-29T20:59:55.737+0000] INFO  thredds.featurecollection.cache.GridInventoryCacheChronicle: Grid inventory cache built with: maxEntries=1000, maxBloatFactor=1, averageValueSize=4096

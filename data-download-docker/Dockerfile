@@ -20,11 +20,13 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 
 WORKDIR /app
 
-COPY oceans.yml /app/oceans.yml
-RUN conda env create -n ocean -f /app/oceans.yml
+COPY environment.yml /app/environment.yml
+RUN conda env create -n ocean -f /app/environment.yml
 
 
 RUN echo "conda activate ocean" >> ~/.bashrc
+
+#EXPOSE 5000
 
 ENTRYPOINT ["bash", "-l", "-c"]
 CMD ["/bin/bash"]

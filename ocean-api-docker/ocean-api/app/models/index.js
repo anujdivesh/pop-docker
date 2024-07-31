@@ -23,11 +23,11 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("./user.model.js")(sequelize, Sequelize);
-db.role = require("./role.model.js")(sequelize, Sequelize);
-db.refreshToken = require("./refreshToken.model.js")(sequelize, Sequelize);
-db.country = require("./country.model.js")(sequelize, Sequelize);
-db.organization = require("./organization.model.js")(sequelize, Sequelize);
-db.dataset = require("./dataset.model.js")(sequelize, Sequelize);
+db.role = require("../models/role.model.js")(sequelize, Sequelize);
+db.refreshToken = require("../models/refreshToken.model.js")(sequelize, Sequelize);
+db.country = require("../models/country.model.js")(sequelize, Sequelize);
+db.organization = require("../models/organization.model.js")(sequelize, Sequelize);
+db.dataset = require("../models/dataset.model.js")(sequelize, Sequelize);
 db.task = require("./task.model.js")(sequelize, Sequelize);
 db.log = require("./log.model.js")(sequelize, Sequelize);
 

@@ -151,6 +151,9 @@ cd ${work_dir}
 #COPY THREDDS DOCKER
 cp -rf ./thredds-docker ${threddsConfig}
 cd "${threddsConfig}/thredds-docker"
+PORT="8081" THREDDS="/home/pop/Desktop/ocean-portal2.0/ocean_installer/thredds-docker" TOMCAT_USERS="/home/pop/Desktop/ocean-portal2.0/ocean_installer/thredds-docker/files"\
+    DATA="/home/pop/ocean_portal/datasets" docker-compose up -d thredds-production
+
 #PORT="8081" THREDDS="${threddsConfig}/thredds-docker" TOMCAT_USERS="${threddsConfig}/thredds-docker/files"\
 #    DATA="${dataRoot}" docker-compose up -d thredds-production
 

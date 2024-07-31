@@ -53,7 +53,34 @@ module.exports = (sequelize, Sequelize) => {
       reset_count:{
         type: Sequelize.INTEGER,
         default:0
+      },
+      predecessor_class:{
+        type: Sequelize.STRING
+      },
+      predecessor_class_id:{
+        type: Sequelize.INTEGER
+      },
+      successor_class:{
+        type: Sequelize.STRING
+      },
+      successor_class_id:{
+        type: Sequelize.INTEGER
+      },
+      created_by:{
+        type: Sequelize.STRING,
+        default:'root'
+      },
+      launched_by:{
+        type: Sequelize.STRING,
+        default:'root'
+      },
+      retain:{
+        type: Sequelize.BOOLEAN,
+      },
+      retention_days:{
+        type:Sequelize.INTEGER
       }
+
     });
   
     return Task;
